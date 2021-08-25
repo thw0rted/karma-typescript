@@ -1,6 +1,7 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
+        "sourceMap": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "target": "ES5",
@@ -12,5 +13,8 @@
     },
     "exclude": [
         "node_modules"
-    ]
+    ],
+    "angularCompilerOptions": {
+        "strictTemplates": true
+    }
 }

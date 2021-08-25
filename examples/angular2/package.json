@@ -11,18 +11,20 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "test:debug": "karma start --no-single-run --browsers Chrome"
   },
   "dependencies": {
-    "@angular/common": "^9.0.6",
-    "@angular/compiler": "^9.0.6",
-    "@angular/core": "^9.0.6",
-    "@angular/platform-browser": "^9.0.6",
-    "@angular/platform-browser-dynamic": "^9.0.6",
+    "@angular/common": "^12.2.2",
+    "@angular/compiler": "^12.2.2",
+    "@angular/core": "^12.2.2",
+    "@angular/platform-browser": "^12.2.2",
+    "@angular/platform-browser-dynamic": "^12.2.2",
     "@types/core-js": "^2.5.3",
     "@types/jasmine": "^3.5.9",
     "@types/node": "^13.9.1",
     "core-js": "^3.6.4",
+    "csstype": "^3.0.7",
     "jasmine-core": "^3.5.0",
     "karma": "^6.1.0",
     "karma-chrome-launcher": "^3.1.0",
@@ -30,7 +32,10 @@
     "karma-typescript": "latest",
     "karma-typescript-angular2-transform": "latest",
     "rxjs": "^6.5.4",
-    "csstype": "^3.0.7",
-    "typescript": "latest"
+    "typescript": "latest",
+    "zone.js": "^0.11.4"
+  },
+  "devDependencies": {
+    "@angular/cli": "^12.2.2"
   }
 }

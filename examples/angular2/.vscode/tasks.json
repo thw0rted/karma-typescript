@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "test:debug",
+			"problemMatcher": [],
+			"label": "npm: test:debug",
+			"detail": "karma start --no-single-run --browsers Chrome"
+		}
+	]
+}
