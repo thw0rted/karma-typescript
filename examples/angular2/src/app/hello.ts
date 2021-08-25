@@ -1,6 +1,8 @@
-import { Component } from "@angular/core";
+import { ChangeDetectorRef, Component } from "@angular/core";
 // Testing a type only import
 import { Properties } from 'csstype'
+
+import { NameService } from "./name.service";
 
 @Component({
     selector: "app-hello",
@@ -9,4 +11,14 @@ import { Properties } from 'csstype'
 })
 export class HelloComponent {
     public title = "Hello :)";
+
+    constructor(
+        private cd: ChangeDetectorRef,
+        private nameService: NameService,
+    ) { }
+
+    public checkName() {
+        this.title = this.nameService.getName();
+        this.cd.markForCheck();
+    }
 }
