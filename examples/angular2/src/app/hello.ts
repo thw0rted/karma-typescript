@@ -14,7 +14,7 @@ export class HelloComponent {
 
     constructor(
         private cd: ChangeDetectorRef,
-        private nameService: NameService,
+        public readonly nameService: NameService,
     ) { }
 
     public checkName() {

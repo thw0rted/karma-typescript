@@ -17,8 +17,8 @@ describe("HelloComponent", () => {
             .configureTestingModule({
                 declarations: [HelloComponent],
                 providers: [
-                    // NOTE: change this to `true` to and the test should pass
-                    {provide: NameService, useValue: mockNameService(false)}
+                    // NOTE: change this to `true` to and the title test should pass
+                    {provide: NameService, useValue: mockNameService(true)}
                 ]
             })
             .compileComponents()
@@ -38,12 +38,21 @@ describe("HelloComponent", () => {
 
     fit("should display a specified mock title", () => {
 
-        service.nameValue = "Another Name";
+        service.mockValues.nameValue = "Another Name";
         fixture.componentInstance.checkName();
         let debugElement = fixture.debugElement.query(By.css("h1"));
         fixture.detectChanges();
 
         expect(debugElement.nativeElement.textContent).toEqual("Another Name");
+    });
+
+    fit("should display whether the name service is alive", () => {
+
+        service.mockValues.aliveValue = false;
+        let debugElement = fixture.debugElement.query(By.css("p"));
+        fixture.detectChanges();
+
+        expect(debugElement.nativeElement.textContent).toContain("dead");
     });
 
     it("should display a different test title", () => {

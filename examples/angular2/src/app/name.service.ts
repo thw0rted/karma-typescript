@@ -4,5 +4,7 @@ import { Injectable } from "@angular/core";
     providedIn: "root",
 })
 export class NameService {
+    public alive = true;
+
     public getName() { return "A Simple Test"; }
 }
