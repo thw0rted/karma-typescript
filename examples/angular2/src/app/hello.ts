@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 // Testing a type only import
 import { Properties } from 'csstype'
 
@@ -8,5 +8,6 @@ import { Properties } from 'csstype'
     templateUrl: "hello.html"
 })
 export class HelloComponent {
+    @Input() color = "blue";
     public title = "Hello :)";
 }

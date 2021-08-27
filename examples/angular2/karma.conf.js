@@ -24,10 +24,10 @@ module.exports = function(config) {
             compilerOptions: {
                 lib: ["ES2015", "DOM"]
             },
-            reports:
-            {
-                "html-spa": "coverage"
-            }
+            coverageOptions: {
+                instrumentation: false,
+            },
+            reports: {},
         },
 
         reporters: ["dots", "karma-typescript"],
